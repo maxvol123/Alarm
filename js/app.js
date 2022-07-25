@@ -14,6 +14,10 @@ close.addEventListener('click', ()=>{
 	modal.style.display='none'
 	bg.style.opacity='1'
 })
+let alarm1
+	function alarm123(event) {
+		alarm1 = event
+	}
 function alarmTime(event) {
 	let current_time= new Date()
 	let nowHours = current_time.getHours()
@@ -32,10 +36,8 @@ function alarmTime(event) {
 		nowSeconds = `${current_time.getHours()}` + ":"+ `${current_time.getMinutes()}`
 	}
 	}
-	console.log(checkbox.value);
 	time.innerHTML = nowSeconds
-	
-	if (nowSeconds == event ) {
+	if (nowSeconds == alarm1 ) {
 		modal.style.display='block'
 		bg.style.opacity='0.5'
 		if (checkbox.checked===true) {
@@ -43,8 +45,11 @@ function alarmTime(event) {
 		}else{
 			console.log(123);
 			posts.style.display='none'
+			alarm1=undefined
 		}
 	}
+	console.log(nowSeconds)
+	console.log(alarm1)
 	return nowSeconds
 }
 
@@ -55,7 +60,7 @@ setInterval(alarmTime, 1000)
 			
 		} else {
 			posts.style.display='flex'
-			alarmTime(title.value)
+			alarm123(title.value)
 			console.log(title.value);
 			posts.innerHTML = `<div class="time1">Alarm time ${title.value} </div><div class="description">${description.value}</div>`;
 		}
