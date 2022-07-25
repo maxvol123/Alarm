@@ -4,13 +4,25 @@
 	<meta charset="UTF-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>timetable</title>
+	<title>Alarm</title>
 	<link rel="stylesheet" href="/css/osnova.css">
 	<link rel="stylesheet" href="/css/style.css">
 </head>
 <body>
-	<input type="text" value="Enter title" class="title">
-	<input type="text" value="Enter describtion" class="describtion">
-	<button class="create">Add new</button>
+	<div class="bg">
+<div class="container">
+	<div class="form">
+		<input type="time" placeholder="Enter Time" class="form__title">
+		<input type="text" placeholder="Enter description" class="form__description">
+		<button class="create">Add new</button>
+	</div>
+	<div class="time"></div>
+	<div class="posts"></div>
+	
+	</div>
+</div>
+</div>
+<div class="modal">Alarm<div class="close"></div>
+<script src="/js/app.js"></script>
 </body>
 </html>
