@@ -8,17 +8,29 @@ let modal = document.querySelector('.modal')
 let close = document.querySelector('.close')
 let bg = document.querySelector('.bg')
 let checkbox = document.querySelector('.checkbox__input')
+let alarm__sound = document.querySelector('.alarm__sound')
 let nowSeconds = 1
 var audio1 = new Audio();
 audio1.preload = 'auto';
 audio1.loop=true
 audio1.src = '../audio/alarm1.mp3';
 
+var audio2 = new Audio();
+audio2.preload = 'auto';
+audio2.loop=true
+audio2.src = '../audio/alarm2.mp3';
+
+var audio3 = new Audio();
+audio3.preload = 'auto';
+audio3.loop=true
+audio3.src = '../audio/alarm3.mp3';
 
 close.addEventListener('click', ()=>{
 	modal.style.display='none'
 	bg.style.opacity='1'
 	audio1.pause()
+	audio2.pause()
+	audio3.pause()
 })
 let alarm1
 	function alarm123(event) {
@@ -44,7 +56,17 @@ function alarmTime(event) {
 	}
 	time.innerHTML = nowSeconds
 	if (nowSeconds == alarm1 ) {
-		audio1.play();
+		if (alarm__sound.value==1) {
+			audio1.play();
+		}else{
+			if (alarm__sound.value==2) {
+				audio2.play();
+			}else{
+				if (alarm__sound.value==3) {
+					audio3.play();
+				}
+			}
+		}
 		modal.style.display='block'
 		bg.style.opacity='0.5'
 		if (checkbox.checked===true) {

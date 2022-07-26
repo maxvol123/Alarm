@@ -111,6 +111,19 @@ display: none;
     color: grey;
     margin-bottom: 10px;
   }
+  .alarm__sound{
+    width: 100px;
+    height: 25px;
+    padding: 1px 35px 1px 5px;
+    font-size: 15px;
+    border: 2px solid #ccc;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    }
+    select::-ms-expand { 
+    display: none; /* удалите стрелку по умолчанию в IE 10 и 11 */
+  }
 @media (min-width: 768px) {
   .button-36 {
     padding: 0 2.6rem;
