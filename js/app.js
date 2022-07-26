@@ -9,10 +9,16 @@ let close = document.querySelector('.close')
 let bg = document.querySelector('.bg')
 let checkbox = document.querySelector('.checkbox__input')
 let nowSeconds = 1
+var audio1 = new Audio();
+audio1.preload = 'auto';
+audio1.loop=true
+audio1.src = '../audio/alarm1.mp3';
+
 
 close.addEventListener('click', ()=>{
 	modal.style.display='none'
 	bg.style.opacity='1'
+	audio1.pause()
 })
 let alarm1
 	function alarm123(event) {
@@ -38,6 +44,7 @@ function alarmTime(event) {
 	}
 	time.innerHTML = nowSeconds
 	if (nowSeconds == alarm1 ) {
+		audio1.play();
 		modal.style.display='block'
 		bg.style.opacity='0.5'
 		if (checkbox.checked===true) {
