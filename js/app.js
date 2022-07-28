@@ -67,7 +67,7 @@ function alarmTime(event) {
 				}
 			}
 		}
-		modal.style.display='block'
+		modal.style.display='flex'
 		bg.style.opacity='0.5'
 		if (checkbox.checked===true) {
 			console.log(123541);

@@ -5,8 +5,6 @@ body{
 .container{
 	padding: 10px 15px;
 }
-.form{
-}
 .form__title {
 	background: transparent;
 	border: none;
@@ -61,12 +59,26 @@ body{
   align-items: center;
   justify-content: center;
   flex-direction: column;
+  margin-top: 40px;
+}
+.time1 {
+font-size: 20px;
+}
+.description {
+font-size: 15px;
+margin-top: 10px;
+}
+@font-face {
+  font-family: myFirstFont;
+  src: url(/fonts/digital-7.ttf);
 }
 .time{
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
+  font-family: myFirstFont;
+  font-size: 75px;
 }
 .bg{
   background-color: black;
